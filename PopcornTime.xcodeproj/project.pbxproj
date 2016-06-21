@@ -78,8 +78,6 @@
 		92D0A7DA1CE28EE900B3279B /* WatchlistRecipe.xml in Resources */ = {isa = PBXBuildFile; fileRef = 92D0A7D91CE28EE900B3279B /* WatchlistRecipe.xml */; };
 		92D0A7DC1CE28EF300B3279B /* WatchlistRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D0A7DB1CE28EF300B3279B /* WatchlistRecipe.swift */; };
 		92DF99D11CA6FB0800D6944C /* Movie+Parallax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DF99D01CA6FB0800D6944C /* Movie+Parallax.swift */; };
-		D94F191B1D12004500245177 /* KickassSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94F191A1D12004500245177 /* KickassSearch.swift */; };
-		D94F191D1D12065C00245177 /* KATSearchRecipe.xml in Resources */ = {isa = PBXBuildFile; fileRef = D94F191C1D12065C00245177 /* KATSearchRecipe.xml */; };
 		DD32B1C21D0274D00015EB28 /* WebServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32B1C11D0274D00015EB28 /* WebServerManager.swift */; };
 		E6295F2B1CACF96100CD45E3 /* SeasonPickerRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6295F2A1CACF96100CD45E3 /* SeasonPickerRecipe.swift */; };
 		E6295F2D1CACF9C100CD45E3 /* SeasonPickerRecipe.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6295F2C1CACF9C100CD45E3 /* SeasonPickerRecipe.xml */; };
@@ -221,8 +219,6 @@
 		92DF99D01CA6FB0800D6944C /* Movie+Parallax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Movie+Parallax.swift"; path = "Extensions/Movie+Parallax.swift"; sourceTree = "<group>"; };
 		AFEF107134131C2FAC746C22 /* Pods-TopShelf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopShelf.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopShelf/Pods-TopShelf.debug.xcconfig"; sourceTree = "<group>"; };
 		C900A4508BB37D7070FA6888 /* Pods_PopcornTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PopcornTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D94F191A1D12004500245177 /* KickassSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KickassSearch.swift; sourceTree = "<group>"; };
-		D94F191C1D12065C00245177 /* KATSearchRecipe.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = KATSearchRecipe.xml; sourceTree = "<group>"; };
 		DD32B1C11D0274D00015EB28 /* WebServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServerManager.swift; sourceTree = "<group>"; };
 		DD53E3861D01F5E400147716 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		E31248A9DC45B7AEBE724E1D /* Pods-PopcornTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopcornTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-PopcornTime/Pods-PopcornTime.release.xcconfig"; sourceTree = "<group>"; };
@@ -277,7 +273,6 @@
 		280910301C99DFA200C8EC1C /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				D94F191A1D12004500245177 /* KickassSearch.swift */,
 				925F8DF61CA9E477007100EB /* Watchlist.swift */,
 				923860561CA0E40500A21F3B /* Latest.swift */,
 				280910311C99DFDA00C8EC1C /* Popular.swift */,
@@ -461,7 +456,6 @@
 			isa = PBXGroup;
 			children = (
 				925F8DDF1CA9E44C007100EB /* YIFYSearchRecipe.swift */,
-				D94F191C1D12065C00245177 /* KATSearchRecipe.xml */,
 				925F8DDC1CA9E44C007100EB /* SearchRecipe.xml */,
 			);
 			name = Search;
@@ -633,11 +627,11 @@
 				TargetAttributes = {
 					0026820F1CD0B76200F51D31 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = LSMKHW6LLV;
+						DevelopmentTeam = HN75UA2F78;
 					};
 					287B85331C9873A200EEF5C8 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = LSMKHW6LLV;
+						DevelopmentTeam = HN75UA2F78;
 					};
 				};
 			};
@@ -676,7 +670,6 @@
 				280910381C99E6CA00C8EC1C /* Loading.xml in Resources */,
 				92D0A7DA1CE28EE900B3279B /* WatchlistRecipe.xml in Resources */,
 				00C28EA61CE1DB2E00E4D8BF /* Genre.js in Resources */,
-				D94F191D1D12065C00245177 /* KATSearchRecipe.xml in Resources */,
 				92925B2F1C9CA4E80086D362 /* Main.storyboard in Resources */,
 				E6B5F7911CB08FDE000F0644 /* SeasonProductRecipe.xml in Resources */,
 				287B853F1C9873A200EEF5C8 /* Assets.xcassets in Resources */,
@@ -890,7 +883,6 @@
 				E6B5F78F1CB08954000F0644 /* SeasonProductRecipe.swift in Sources */,
 				926A48771CDFAB7000D02962 /* SQSubSetting.m in Sources */,
 				921E44F41CE78F930012FEAD /* SettingsViewController.swift in Sources */,
-				D94F191B1D12004500245177 /* KickassSearch.swift in Sources */,
 				925F8DE41CA9E44C007100EB /* CatalogRecipe.swift in Sources */,
 				287B85381C9873A200EEF5C8 /* AppDelegate.swift in Sources */,
 				DD32B1C21D0274D00015EB28 /* WebServerManager.swift in Sources */,
@@ -949,11 +941,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TopShelf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-<<<<<<< HEAD
-				PRODUCT_BUNDLE_IDENTIFIER = com.aggelos81.PopcornTime.TopShelf;
-=======
 				PRODUCT_BUNDLE_IDENTIFIER = com.popcorntime.PopcornTime.TopShelf;
->>>>>>> Kickass-Search
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -970,11 +958,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TopShelf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-<<<<<<< HEAD
-				PRODUCT_BUNDLE_IDENTIFIER = com.aggelos81.PopcornTime.TopShelf;
-=======
 				PRODUCT_BUNDLE_IDENTIFIER = com.popcorntime.PopcornTime.TopShelf;
->>>>>>> Kickass-Search
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -1080,15 +1064,11 @@
 				);
 				INFOPLIST_FILE = PopcornTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-<<<<<<< HEAD
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PopcornTime/Objective-C/TOSMBClient/libdsm",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aggelos81.PopcornTime;
-=======
 				PRODUCT_BUNDLE_IDENTIFIER = com.popcorntime.PopcornTime;
->>>>>>> Kickass-Search
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PopcornTime/PopcornTime-Bridging-Header.h";
@@ -1113,15 +1093,11 @@
 				);
 				INFOPLIST_FILE = PopcornTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-<<<<<<< HEAD
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PopcornTime/Objective-C/TOSMBClient/libdsm",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aggelos81.PopcornTime;
-=======
 				PRODUCT_BUNDLE_IDENTIFIER = com.popcorntime.PopcornTime;
->>>>>>> Kickass-Search
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PopcornTime/PopcornTime-Bridging-Header.h";

@@ -1,3 +1,4 @@
+
 #import "SYVLCPlayerViewController.h"
 //#import "SYAppDelegate.h"
 //#import "SQMovieViewController.h"
@@ -56,7 +57,7 @@ static NSString *const kText = @"kText";
     BOOL _didClickGesture;
     BOOL _panChangingTime;
     NSUInteger _lastButtonSelectedTag;
-    
+
     SQSubSetting *subSetting;
     
     NSDictionary *_videoInfo;
@@ -142,7 +143,7 @@ static NSString *const kText = @"kText";
         // Status
         NSString *speedString = [NSByteCountFormatter stringFromByteCount:status.downloadSpeed countStyle:NSByteCountFormatterCountStyleBinary];
         _statsLabel.text = [NSString stringWithFormat:@"Overall Progress: %.0f%%  Speed: %@/s  Seeds: %d  Peers: %d", status.totalProgreess * 100, speedString, status.seeds, status.peers];
-        //        NSLog(@"%.0f%%, %.0f%%, %@/s, %d,- %d", status.bufferingProgress*100, status.totalProgreess*100, speedString, status.seeds, status.peers);
+//        NSLog(@"%.0f%%, %.0f%%, %@/s, %d,- %d", status.bufferingProgress*100, status.totalProgreess*100, speedString, status.seeds, status.peers);
         
         // State
         _overallProgressView.progress = status.totalProgreess;
@@ -242,7 +243,7 @@ static NSString *const kText = @"kText";
     _panGestureRecognizerDelay = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureDelay:)];
     _panGestureRecognizerDelay.delegate = self;
     [self.subValueDelayButton addGestureRecognizer:_panGestureRecognizerDelay];
-    
+
     if (_videoInfo) {
         _statsLabel.text = @"";
         _percentLabel.text = @"0%";
@@ -285,7 +286,7 @@ static NSString *const kText = @"kText";
 
 - (void) updateLoadingRatio
 {
-    
+
 }
 
 
@@ -389,23 +390,23 @@ static NSString *const kText = @"kText";
             [self playandPause:nil];
         }
     }/*
-      // Touch Left
-      else if (press.type == 2) {
-      
-      }
-      // Touch Right
-      else if (press.type == 3) {
-      
-      }
-      // Touch Up
-      else if (press.type == 0) {
-      
-      }
-      // Touch Down
-      else if (press.type == 1) {
-      
-      }*/
-    
+    // Touch Left
+    else if (press.type == 2) {
+        
+    }
+    // Touch Right
+    else if (press.type == 3) {
+        
+    }
+    // Touch Up
+    else if (press.type == 0) {
+        
+    }
+    // Touch Down
+    else if (press.type == 1) {
+        
+    }*/
+
 }
 
 
@@ -505,11 +506,11 @@ static NSString *const kText = @"kText";
     } else if (context.nextFocusedView.tag == 1001) {
         if ([context.previouslyFocusedView isKindOfClass:[SQTabMenuCollectionViewCell class]]) {
             [self deactiveCollectionViews];
-            //            self.middleButton.hidden = YES;
+//            self.middleButton.hidden = YES;
             [self setNeedsFocusUpdate];
         } else {
             [self closeTopMenu];
-            //            NSLog(@"Update Focus");
+//            NSLog(@"Update Focus");
         }
     }
     
@@ -517,11 +518,11 @@ static NSString *const kText = @"kText";
         [self deactiveHeaderButtons];
         [self.subValueDelayButton setTitleColor:[UIColor colorWithWhite:1.0 alpha:kAlphaFocused] forState:UIControlStateFocused];
     } else if (context.previouslyFocusedView.tag == 4) {
-        //        self.middleButton.hidden = YES;
+//        self.middleButton.hidden = YES;
         [self activeHeaderButtons];
         [self.subValueDelayButton setTitleColor:[UIColor colorWithWhite:1.0 alpha:kAlphaFocusedBackground] forState:UIControlStateFocused];
     }
-    
+
 }
 
 
@@ -536,13 +537,13 @@ static NSString *const kText = @"kText";
 - (void) openTopMenu
 {
     [self hideSwipeMessage];
-    
+
     self.subsButton.enabled      = NO;
     self.subsDelayButton.enabled = NO;
     self.audioButton.enabled     = NO;
-    
+
     self.topTopMenuSpace.constant = .0;
-    
+
     _panGestureRecognizer.enabled = NO;
     
     _topMenuContainerView.hidden = NO;
@@ -565,7 +566,7 @@ static NSString *const kText = @"kText";
     _panChangingTime = NO;
     
     self.topTopMenuSpace.constant = -232.0;
-    
+
     _panGestureRecognizer.enabled = YES;
     
     [UIView animateWithDuration:0.3 animations:^{
@@ -588,14 +589,14 @@ static NSString *const kText = @"kText";
 
 - (void) showMiddleButton
 {
-    //    self.middleButton.hidden = NO;
+//    self.middleButton.hidden = NO;
     
 }
 
 
 - (void) hideMiddleButton
 {
-    //    self.middleButton.hidden = YES;
+//    self.middleButton.hidden = YES;
     
 }
 
@@ -622,10 +623,10 @@ static NSString *const kText = @"kText";
 - (IBAction)panGesture:(id)sender
 {
     
-    //    NSLog(@"panGesture");
+//    NSLog(@"panGesture");
     
     if (!_videoLoaded) return;
-    
+
     UIPanGestureRecognizer *panGestureRecognizer = (UIPanGestureRecognizer *) sender;
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(hideOSD) object:nil];
     
@@ -721,7 +722,7 @@ static NSString *const kText = @"kText";
         float position = (_leftCurrentLineSpace.constant - 100.0) / self.lineBackView.frame.size.width;
         [_mediaplayer pause];
         [_mediaplayer setPosition:position];
-        
+
         self.indicatorView.hidden = NO;
         
         if (position == 1.0) {
@@ -732,16 +733,16 @@ static NSString *const kText = @"kText";
         }
     }
     
-    //    _isPanning = NO;
-    //    _panChangingTime = NO;
-    //    _panGestureRecognizer.cancelsTouchesInView = NO;
-    //
-    //    self.heightCurrentLineSpace.constant = 25.0;
-    //    [UIView animateWithDuration:0.3 animations:^{
-    //        [self.view layoutIfNeeded];
-    //    }];
-    //
-    //    _lastPointPan = CGPointZero;
+//    _isPanning = NO;
+//    _panChangingTime = NO;
+//    _panGestureRecognizer.cancelsTouchesInView = NO;
+//    
+//    self.heightCurrentLineSpace.constant = 25.0;
+//    [UIView animateWithDuration:0.3 animations:^{
+//        [self.view layoutIfNeeded];
+//    }];
+//    
+//    _lastPointPan = CGPointZero;
 }
 
 
@@ -817,34 +818,34 @@ static NSString *const kText = @"kText";
             // Si hay entrado realmente en el video
             // guarda el ratio
             if (_videoDidOpened) {
-                //            if (_videoDidOpened && _hash.length > 0) {
+//            if (_videoDidOpened && _hash.length > 0) {
                 
-                //                float ratio = [self currentTimeAsPercentage];
-                //                if (ratio > 0.95) {
-                //                    ratio = 1.0;
-                //                }
+//                float ratio = [self currentTimeAsPercentage];
+//                if (ratio > 0.95) {
+//                    ratio = 1.0;
+//                }
                 
                 NSArray *viewControllers = [self.navigationController viewControllers];
                 
                 for (NSInteger i = [viewControllers count]-1 ; i >= 0 ; i--) {
                     
-                    //                    id object = viewControllers[i];
+//                    id object = viewControllers[i];
                     
                     /*
-                     if ([object isKindOfClass:[SQMovieDetailViewController class]]) {
-                     SQMovieDetailViewController *detailViewController = (SQMovieDetailViewController *) object;
-                     [[SYContentController shareController]setRatio:ratio toMovie:detailViewController.imdb];
-                     break;
-                     }
-                     else if ([object isKindOfClass:[SQShowDetailViewController class]]) {
-                     SQShowDetailViewController *detailViewController = (SQShowDetailViewController *) object;
-                     [[SYContentController shareController]setRatio:ratio
-                     toEpisode:detailViewController.episodeSelected
-                     withBlock:^(NSData *data, NSError *error) {
-                     [detailViewController setRatio:ratio];
-                     }];
-                     break;
-                     }
+                    if ([object isKindOfClass:[SQMovieDetailViewController class]]) {
+                        SQMovieDetailViewController *detailViewController = (SQMovieDetailViewController *) object;
+                        [[SYContentController shareController]setRatio:ratio toMovie:detailViewController.imdb];
+                        break;
+                    }
+                    else if ([object isKindOfClass:[SQShowDetailViewController class]]) {
+                        SQShowDetailViewController *detailViewController = (SQShowDetailViewController *) object;
+                        [[SYContentController shareController]setRatio:ratio
+                                                             toEpisode:detailViewController.episodeSelected
+                                                             withBlock:^(NSData *data, NSError *error) {
+                                                                 [detailViewController setRatio:ratio];
+                                                             }];
+                        break;
+                    }
                      */
                 }
                 
@@ -858,7 +859,7 @@ static NSString *const kText = @"kText";
             _mediaplayer.delegate = nil;
             _mediaplayer = nil;
             
-            //            [[SQClientController shareClient]stopStreamingWithHash:_hash withBlock:nil];
+//            [[SQClientController shareClient]stopStreamingWithHash:_hash withBlock:nil];
             
             [self stopStreamingTorrent];
             
@@ -870,32 +871,32 @@ static NSString *const kText = @"kText";
         
         if (!sender || panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
             /*
-             if (_hash.length > 0) {
-             float ratio = 1.0;
-             
-             NSArray *viewControllers = [[self.rootViewController navigationController]viewControllers];
-             
-             for (NSInteger i = [viewControllers count]-1 ; i >= 0 ; i--) {
-             
-             id object = viewControllers[i];
-             
-             if ([object isKindOfClass:[SQMovieDetailViewController class]]) {
-             SQMovieDetailViewController *detailViewController = (SQMovieDetailViewController *) object;
-             [[SYContentController shareController]setRatio:ratio toMovie:detailViewController.imdb];
-             break;
-             }
-             else if ([object isKindOfClass:[SQShowDetailViewController class]]) {
-             SQShowDetailViewController *detailViewController = (SQShowDetailViewController *) object;
-             [[SYContentController shareController]setRatio:ratio toEpisode:detailViewController.episodeSelected withBlock:^(NSData *data, NSError *error) {
-             [self.rootViewController setRatio:ratio];
-             }];
-             
-             break;
-             }
-             }
-             
-             [self rememberAudioSub];
-             }
+            if (_hash.length > 0) {
+                float ratio = 1.0;
+                
+                NSArray *viewControllers = [[self.rootViewController navigationController]viewControllers];
+                
+                for (NSInteger i = [viewControllers count]-1 ; i >= 0 ; i--) {
+                    
+                    id object = viewControllers[i];
+                    
+                    if ([object isKindOfClass:[SQMovieDetailViewController class]]) {
+                        SQMovieDetailViewController *detailViewController = (SQMovieDetailViewController *) object;
+                        [[SYContentController shareController]setRatio:ratio toMovie:detailViewController.imdb];
+                        break;
+                    }
+                    else if ([object isKindOfClass:[SQShowDetailViewController class]]) {
+                        SQShowDetailViewController *detailViewController = (SQShowDetailViewController *) object;
+                        [[SYContentController shareController]setRatio:ratio toEpisode:detailViewController.episodeSelected withBlock:^(NSData *data, NSError *error) {
+                            [self.rootViewController setRatio:ratio];
+                        }];
+                        
+                        break;
+                    }
+                }
+                
+                [self rememberAudioSub];
+            }
              */
             
             [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(updateLoadingRatio) object:nil];
@@ -904,7 +905,7 @@ static NSString *const kText = @"kText";
             _mediaplayer.delegate = nil;
             _mediaplayer = nil;
             
-            //            [[SQClientController shareClient]stopStreamingWithHash:_hash withBlock:nil];
+//            [[SQClientController shareClient]stopStreamingWithHash:_hash withBlock:nil];
             
             [self stopStreamingTorrent];
             
@@ -995,15 +996,15 @@ static NSString *const kText = @"kText";
         
         [UIView animateWithDuration:0.3 animations:^{
             self.loadingLogo.alpha = .0;
-            //            self.progressView.alpha = .0;
+//            self.progressView.alpha = .0;
             self.indicatorView.alpha = 1.0;
         }];
         
         _videoDidOpened = YES;
     }
-    
+ 
     self.indicatorView.hidden = YES;
-    
+
     if (!_panChangingTime) {
         self.leftLabel.text   = [self currentTimeAsString];
         self.rightLabel.text  = [self durationToEndAsString];
@@ -1442,24 +1443,24 @@ static NSString *const kText = @"kText";
     }];
     
     /*
-     [[SQClientController shareClient]subtitlesListForHash:_hash
-     withBlock:^(NSData *data, NSError *error) {
+    [[SQClientController shareClient]subtitlesListForHash:_hash
+                                                withBlock:^(NSData *data, NSError *error) {
      
-     SBJsonParser *parser = [[SBJsonParser alloc]init];
-     id object = [parser objectWithData:data];
+                                                    SBJsonParser *parser = [[SBJsonParser alloc]init];
+                                                    id object = [parser objectWithData:data];
      
-     if (!error && [object isKindOfClass:[NSArray class]]) {
+                                                    if (!error && [object isKindOfClass:[NSArray class]]) {
      
      
-     }
-     else {
-     _tryAccount++;
-     if (_tryAccount < 10) {
-     [self performSelector:@selector(createAudioSubsDatasource)
-     withObject:nil afterDelay:5.0];
-     }
-     }
-     }];
+                                                    }
+                                                    else {
+                                                        _tryAccount++;
+                                                        if (_tryAccount < 10) {
+                                                            [self performSelector:@selector(createAudioSubsDatasource)
+                                                                       withObject:nil afterDelay:5.0];
+                                                        }
+                                                    }
+                                                }];
      */
     
 }// createOptionsRoll
@@ -1508,11 +1509,11 @@ static NSString *const kText = @"kText";
         [self updateSubtitle:lastFounded.content];
         
         CGRect rectBack = [lastFounded.content boundingRectWithSize:CGSizeMake(1920, 1080)
-                                                            options:NSStringDrawingUsesLineFragmentOrigin
-                                                         attributes:[subSetting attributes]
-                                                            context:nil];
+                                               options:NSStringDrawingUsesLineFragmentOrigin
+                                            attributes:[subSetting attributes]
+                                               context:nil];
         
-        
+
         if (subSetting.backgroundType == SQSubSettingBackgroundBlur) {
             self.widthSubtitleConstraint.constant  = rectBack.size.width + 140;
             self.heightSubtitleConstraint.constant = rectBack.size.height + 34;
@@ -1527,7 +1528,7 @@ static NSString *const kText = @"kText";
             self.heightSubtitleViewConstraint.constant = rectBack.size.height + 34;
             self.backSubtitleView.hidden = NO;
         }
-        
+       
         self.heightSubtitleTextConstraint.constant = rectBack.size.height + 34;
         [self.view layoutIfNeeded];
         
@@ -1552,22 +1553,22 @@ static NSString *const kText = @"kText";
 - (void) updateSubtitle:(NSString *) string
 {
     /*
-     NSShadow *shadow = [[NSShadow alloc]init];
-     shadow.shadowOffset = CGSizeMake(.0, 1.0);
-     shadow.shadowBlurRadius = 5.0;
-     shadow.shadowColor = [UIColor blackColor];
-     
-     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
-     paragraphStyle.alignment = NSTextAlignmentCenter;
-     paragraphStyle.lineSpacing = 1.6;
-     
-     NSMutableAttributedString *attr = [[NSMutableAttributedString alloc]initWithString:string];
-     [attr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:_sizeFloat weight:UIFontWeightMedium] range:NSMakeRange(0, string.length)];
-     [attr addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, string.length)];
-     [attr addAttribute:NSShadowAttributeName value:shadow range:NSMakeRange(0, string.length)];
-     [attr addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, string.length)];
-     */
+    NSShadow *shadow = [[NSShadow alloc]init];
+    shadow.shadowOffset = CGSizeMake(.0, 1.0);
+    shadow.shadowBlurRadius = 5.0;
+    shadow.shadowColor = [UIColor blackColor];
     
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
+    paragraphStyle.alignment = NSTextAlignmentCenter;
+    paragraphStyle.lineSpacing = 1.6;
+    
+    NSMutableAttributedString *attr = [[NSMutableAttributedString alloc]initWithString:string];
+    [attr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:_sizeFloat weight:UIFontWeightMedium] range:NSMakeRange(0, string.length)];
+    [attr addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, string.length)];
+    [attr addAttribute:NSShadowAttributeName value:shadow range:NSMakeRange(0, string.length)];
+    [attr addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, string.length)];
+    */
+
     self.subtitleTextView.attributedText = [[NSAttributedString alloc]initWithString:string attributes:[subSetting attributes]];
 }
 
@@ -1580,7 +1581,7 @@ static NSString *const kText = @"kText";
     div_t hours = div(totalDurationInSeconds,3600);
     div_t minutes = div(hours.rem,60);
     int seconds = minutes.rem;
-    
+
     return [NSString stringWithFormat:@"%02d:%02d:%02d", hours.quot, minutes.quot, seconds];
     
 }// durationAsString

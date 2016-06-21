@@ -37,12 +37,6 @@
                         <title>Watchlist</title>
                     </overlay>
                 </lockup>
-                <lockup actionID="showKickassSearch">
-                    <img class="round" src="http://i.cubeupload.com/0LUcIF.png" width="548" height="250"></img>
-                    <overlay>
-                        <title>Kickass Search</title>
-                    </overlay>
-                </lockup>
                 <lockup actionID="showSettings">
                     <img class="round" src="http://i.cubeupload.com/ZaJQcD.png" width="548" height="250"></img>
                     <overlay>

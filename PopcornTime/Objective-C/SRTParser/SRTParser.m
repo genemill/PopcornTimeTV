@@ -14,14 +14,6 @@
     NSString *newString = [string stringByReplacingOccurrencesOfString:@"\n\r\n" withString:@"\n\n"];
     newString = [newString stringByReplacingOccurrencesOfString:@"\n\n\n" withString:@"\n\n"];
     NSArray *textBlocks = [newString componentsSeparatedByString:@"\n\n"];
-    //if you are going to do it at least do it properly!!!
-    newString = [newString stringByReplacingOccurrencesOfString:@"<b>" withString:@""];
-    newString = [newString stringByReplacingOccurrencesOfString:@"</b>" withString:@""];
-    newString = [newString stringByReplacingOccurrencesOfString:@"<i>" withString:@""];
-    newString = [newString stringByReplacingOccurrencesOfString:@"</i>" withString:@""];
-    newString = [newString stringByReplacingOccurrencesOfString:@"<u>" withString:@""];
-    newString = [newString stringByReplacingOccurrencesOfString:@"</u>" withString:@""];
-    newString = [newString stringByReplacingOccurrencesOfString:@"{y:i}" withString:@""];
     
     NSMutableArray *subtitles = [[NSMutableArray alloc] init];
     
